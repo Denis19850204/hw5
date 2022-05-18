@@ -116,6 +116,7 @@ body {
 }
 
 .nav-list-link {
+  position: relative;
   color: var(--tittle-color);
   text-decoration: none;
   font-family: 'Roboto';
@@ -125,6 +126,18 @@ body {
   letter-spacing: 0.02em;
   padding-top: 32px;
   padding-bottom: 32px;
+}
+
+.nav-list-link.current::after{
+content: "";
+display: block;
+width: 100%;
+height: 4px;
+position: absolute;
+bottom: 0;
+right: 0;
+background-color: currentColor;
+border-radius: 2px;
 }
 
 .current {
@@ -296,6 +309,43 @@ body {
 .list {
   display: flex;
 }
+
+.work-text{
+  position: relative;
+}
+
+.work-text::before{
+  content: "";
+  display: block;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+ 
+}
+
+.work-item{
+  position: relative;
+}
+
+.work-text{
+position: absolute;
+  
+}
+
+/* .work-text::after{
+  content: "";
+  
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  right: 0;
+  padding: 27px 82px;
+  background-color: rgba(47, 48, 58, 0.8)
+  
+} */
+
+
 
 /* -------------------------------------- */
 
