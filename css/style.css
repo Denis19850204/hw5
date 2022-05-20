@@ -647,11 +647,76 @@ body {
   margin-right: 30px;
   margin-bottom: 30px;
   background-color: var(--secondary-color);
+  
 }
 
 .work-link {
   display: block;
   text-decoration: none;
+  
+}
+
+.work-thumb{
+  position: relative;
+}
+
+.work-thumb::before{
+  display: inline-block;
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  background-color: var(--accent-color);
+  opacity: 0;
+}
+
+.work-thumb:hover::before{
+  opacity: 1;
+}
+
+.work-overlay{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  width: 322px;
+  height: 168px;
+    
+}
+
+
+
+
+
+.work-thumb:hover .work-overlay{
+  opacity: 1;
+}
+
+/* .work-link{
+  position: relative;
+  overflow: hidden;
+}
+
+
+
+
+
+.work-description{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transform: translateY(100%);
+  
+  transition: transform 250ms ease; 
+  
+  
+} */
+
+.work-link:hover .work-description{
+  transform: translateY(0);
 }
 
 .work-link:hover,
