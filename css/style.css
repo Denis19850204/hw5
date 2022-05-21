@@ -250,6 +250,8 @@ body {
   background-color: #00000033;
 
   z-index: 10;
+
+  transition: opacity 500ms, visibility 500ms;
 }
 
 .backdrop.is-hidden {
@@ -264,9 +266,21 @@ body {
   height: 581px;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  /* transform: translate(-50%, -50%); */
   background-color: var(--secondary-color);
   border-radius: 4px;
+
+  transition: transform 400ms ease-in-out 200ms, topacity 400ms ease-in-out 200ms;
+}
+
+.backdrop.is-hidden .modal-wrapper{
+  transform: translate(-50%, -50%) scale(0.5);
+  opacity: 0;
+}
+
+.backdrop .modal-wrapper{
+  transform: translate(-50%, -50%) scale(1);
+  opacity: 1;
 }
 
 .modal-btn {
